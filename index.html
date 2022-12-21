@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CKEditor 5 Quick start guide</title>
+  </head>
+  <body>
+    <div id="editor">
+      <p>The editor content goes here.</p>
+    </div>
+
+    <script src="./dist/bundle.js"></script>
+    <script>
+      ClassicEditor.create(document.querySelector(".editor"), {
+        licenseKey: "",
+      })
+        .then((editor) => {
+          window.editor = editor;
+        })
+        .catch((error) => {
+          console.error("Oops, something went wrong!");
+          console.error(
+            "Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:"
+          );
+          console.warn("Build id: ay3b9lio4of4-z9sbaqau3egc");
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>
