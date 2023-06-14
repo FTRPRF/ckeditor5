@@ -3,7 +3,7 @@ name: Update CKEditor 5 blob dev
 on:
     push:
         branches:
-            - own-source-plugin
+            - own-src-plugin
 
 jobs:
     build:
