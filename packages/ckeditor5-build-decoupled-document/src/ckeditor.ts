@@ -173,6 +173,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'exercise',
 				'modal',
 				'styledLink',
+				'source',
 			],
 		},
 		image: {
