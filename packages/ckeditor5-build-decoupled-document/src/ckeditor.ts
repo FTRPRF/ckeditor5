@@ -70,6 +70,7 @@ import { Modal } from './plugins/modal';
 import { StyledLink } from './plugins/styledLink/index';
 // @ts-ignore
 import { FullScreen } from './plugins/fullScreen/index';
+import { Source } from './plugins/source/index';
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 	public static override builtinPlugins = [
@@ -124,6 +125,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		Modal,
 		StyledLink,
 		FullScreen,
+		Source,
 	];
 
 	public static override defaultConfig = {
@@ -171,6 +173,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'modal',
 				'styledLink',
 				'fullScreen',
+				'source',
 			],
 		},
 		image: {
