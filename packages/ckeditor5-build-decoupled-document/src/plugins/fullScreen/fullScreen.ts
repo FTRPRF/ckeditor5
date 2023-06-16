@@ -17,7 +17,7 @@ export default class FullScreen extends Plugin {
 			button.set({
 				label: 'FullScreen',
 				withText: false,
-				maximizeIcon,
+				icon: maximizeIcon,
 			});
 
 			button.on('execute', () => {
