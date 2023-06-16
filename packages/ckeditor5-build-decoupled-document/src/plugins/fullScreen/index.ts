@@ -1,4 +1,4 @@
-import icon from './icon.svg';
+import icon from './maximize.svg';
 
 export { default as FullScreen } from './fullScreen';
 
