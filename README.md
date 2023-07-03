@@ -142,7 +142,16 @@ The development repository of CKEditor 5 is located at [https://github.com/ckedi
 
 - add changes to ckeditor5-build-decoupled-document
 - add a workflow for the changes in .github
-- add the right environment variable to your studio .env file and get going
+- add the right environment variable to your studio .env file and get going.  The format for the value of the
+  environment variable will be:
+```.env
+https://ckeditorbuilddev.blob.core.windows.net/ckeditor/{name_you_picked}.js
+```
+
+eg:
+```.env
+https://ckeditorbuilddev.blob.core.windows.net/ckeditor/ckeditor5ImageResize.js
+```
 
 
 ## How to trigger a build
