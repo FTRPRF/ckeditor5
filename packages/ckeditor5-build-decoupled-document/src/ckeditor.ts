@@ -186,7 +186,39 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 			],
 		},
 		image: {
-			resizeUnit: 'px' as const,
+			resizeUnit: '%' as const,
+			resizeOptions: [
+				{
+					name: 'resizeImage:original',
+					value: null,
+					label: 'Original'
+				},
+				{
+					name: 'resizeImage:14',
+					value: '14',
+					label: '14%'
+				},
+				{
+					name: 'resizeImage:24',
+					value: '24',
+					label: '24%'
+				},
+				{
+					name: 'resizeImage:38',
+					value: '38',
+					label: '38%'
+				},
+				{
+					name: 'resizeImage:50',
+					value: '50',
+					label: '50%'
+				},
+				{
+					name: 'resizeImage:62',
+					value: '62',
+					label: '62%'
+				},
+			],
 			toolbar: [
 				'imageStyle:inline',
 				'imageStyle:wrapText',
@@ -194,6 +226,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'|',
 				'toggleImageCaption',
 				'imageTextAlternative',
+				'imageResize'
 			],
 		},
 		table: {
