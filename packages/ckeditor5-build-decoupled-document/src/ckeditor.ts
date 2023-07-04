@@ -301,6 +301,13 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'videoStyle:alignRight'
 			]
 		},
+		heading: {
+			options: [
+				{ model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+				{ model: 'heading2', title: 'Heading 1', class: 'ck-heading_heading1' },
+				{ model: 'heading3', title: 'Heading 2', class: 'ck-heading_heading2' },
+			]
+		},
 
 		// This value must be kept in sync with the language defined in webpack.config.js.
 		language: 'en'
