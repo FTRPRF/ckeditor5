@@ -36,6 +36,7 @@
     "@ckeditor/ckeditor5-ckbox": "^37.1.0",
     "@ckeditor/ckeditor5-ckfinder": "^37.1.0",
     "@ckeditor/ckeditor5-cloud-services": "^37.1.0",
+    "@ckeditor/ckeditor5-code-block": "^37.1.0",
     "@ckeditor/ckeditor5-easy-image": "^37.1.0",
     "@ckeditor/ckeditor5-editor-decoupled": "^37.1.0",
     "@ckeditor/ckeditor5-essentials": "^37.1.0",

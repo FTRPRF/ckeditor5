@@ -59,6 +59,7 @@ import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
+import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
 
 import ClickObserver from '@ckeditor/ckeditor5-engine/src/view/observer/clickobserver';
 import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support/src/index';
@@ -158,7 +159,8 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		Audio,
 		AudioInsert,
 		AudioStyle,
-		AudioToolbar
+		AudioToolbar,
+		CodeBlock
 	];
 
 	public static override defaultConfig = {
@@ -177,6 +179,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'strikethrough',
 				'subscript',
 				'superscript',
+				'codeBlock',
 				'|',
 				'alignment',
 				'|',
@@ -212,6 +215,16 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'audioInsert'
 			]
 		},
+		codeBlock: {
+			languages: [
+				{ language: 'html', label: 'HTML' },
+				{ language: 'css', label: 'CSS' },
+				{ language: 'javascript', label: 'JavaScript' },
+				{ language: 'python', label: 'Python' },
+				{ language: 'json', label: 'JSON' },
+				{ language: 'markdown', label: 'Markdown' }
+			]
+		},
 		image: {
 			resizeUnit: '%' as const,
 			resizeOptions: [
@@ -244,7 +257,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 					name: 'resizeImage:62',
 					value: '62',
 					label: '62%'
-				},
+				}
 			],
 			toolbar: [
 				'imageStyle:inline',
@@ -254,7 +267,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'toggleImageCaption',
 				'imageTextAlternative',
 				'imageResize'
-			],
+			]
 		},
 		table: {
 			contentToolbar: [
