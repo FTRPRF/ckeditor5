@@ -157,8 +157,12 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		CodeBlock,
 		Video,
 		VideoInsert,
+		VideoToolbar,
+		VideoStyle,
 		Audio,
-		AudioInsert
+		AudioInsert,
+		AudioToolbar,
+		AudioStyle
 	];
 
 	public static override defaultConfig = {
@@ -206,7 +210,12 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'modal',
 				'styledLink',
 				'fullScreen',
-				'source'
+				'source',
+				'|',
+				'audio',
+				'audioInsert',
+				'video',
+				'videoInsert'
 			]
 		},
 		image: {
