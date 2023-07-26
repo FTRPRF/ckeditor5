@@ -198,22 +198,22 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 					label: 'Original'
 				},
 				{
-					name: 'resizeImage:14',
+					name: 'resizeImage:10',
 					value: '126',
 					label: '10%'
 				},
 				{
-					name: 'resizeImage:24',
+					name: 'resizeImage:20',
 					value: '253',
 					label: '20%'
 				},
 				{
-					name: 'resizeImage:38',
+					name: 'resizeImage:30',
 					value: '380',
 					label: '30%'
 				},
 				{
-					name: 'resizeImage:38',
+					name: 'resizeImage:40',
 					value: '506',
 					label: '40%'
 				},
@@ -223,27 +223,27 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 					label: '50%'
 				},
 				{
-					name: 'resizeImage:38',
+					name: 'resizeImage:60',
 					value: '760',
 					label: '60%'
 				},
 				{
-					name: 'resizeImage:38',
+					name: 'resizeImage:70',
 					value: '886',
 					label: '70%'
 				},
 				{
-					name: 'resizeImage:38',
+					name: 'resizeImage:80',
 					value: '1013',
 					label: '80%'
 				},
 				{
-					name: 'resizeImage:38',
+					name: 'resizeImage:90',
 					value: '1139',
 					label: '90%'
 				},
 				{
-					name: 'resizeImage:38',
+					name: 'resizeImage:100',
 					value: '1266',
 					label: '100%'
 				}
