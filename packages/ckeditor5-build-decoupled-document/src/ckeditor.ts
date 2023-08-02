@@ -44,6 +44,7 @@ import {
 	AutoImage
 } from '@ckeditor/ckeditor5-image';
 import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
+import { Link } from '@ckeditor/ckeditor5-link';
 import { List, ListProperties } from '@ckeditor/ckeditor5-list';
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
@@ -114,6 +115,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		Indent,
 		IndentBlock,
 		Italic,
+		Link,
 		List,
 		ListProperties,
 		MediaEmbed,
