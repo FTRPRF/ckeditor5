@@ -3,7 +3,7 @@ name: Update CKEditor 5 blob remove link
 on:
     push:
         branches:
-            - feature/TR-2541-overbodig-link-icoontje
+            - enhan/TR-2541-overbodig-link-icoontje
 
 jobs:
     build:
