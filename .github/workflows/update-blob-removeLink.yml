@@ -1,4 +1,4 @@
-name: Update CKEditor 5 blob dev
+name: Update CKEditor 5 blob remove link
 
 on:
     push:
