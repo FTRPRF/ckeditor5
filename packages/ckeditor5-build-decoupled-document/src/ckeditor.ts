@@ -79,6 +79,7 @@ import { StyledLink } from './plugins/styledLink/index';
 // @ts-ignore
 import { FullScreen } from './plugins/fullScreen/index';
 import { Source } from './plugins/source/index';
+import { RemoveStyle } from './plugins/removeStyle';
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 	public static override builtinPlugins = [
@@ -137,7 +138,8 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		TableToolbar,
 		TextTransformation,
 		Underline,
-		UploadAdapter
+		UploadAdapter,
+		RemoveStyle
 	];
 
 	public static override defaultConfig = {
@@ -184,7 +186,8 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'modal',
 				'styledLink',
 				'fullScreen',
-				'source'
+				'source',
+				'removeStyle'
 			]
 		},
 		image: {
