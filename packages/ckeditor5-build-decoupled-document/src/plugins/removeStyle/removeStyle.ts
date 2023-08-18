@@ -1,7 +1,7 @@
 import { Plugin } from 'ckeditor5/src/core';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
-import maximizeIcon from './maximize.svg';
-import minimizeIcon from './minimize.svg';
+import icon from './icon.svg';
+import iconActive from './iconActive.svg';
 
 export default class RemoveStyle extends Plugin {
 	public init(): void {
@@ -19,7 +19,7 @@ export default class RemoveStyle extends Plugin {
 				label: 'RemoveStyle',
 				withText: false,
 				tooltip: true,
-				icon: maximizeIcon,
+				icon,
 			});
 
 			button.on('execute', () => {
@@ -27,7 +27,7 @@ export default class RemoveStyle extends Plugin {
 				button.set({
 					label: 'RemoveStyle',
 					withText: false,
-					icon: isActive ? minimizeIcon : maximizeIcon,
+					icon: isActive ? iconActive : icon,
 				});
 			});
 
