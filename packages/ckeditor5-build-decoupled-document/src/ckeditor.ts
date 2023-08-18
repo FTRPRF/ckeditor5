@@ -79,7 +79,7 @@ import { StyledLink } from './plugins/styledLink/index';
 // @ts-ignore
 import { FullScreen } from './plugins/fullScreen/index';
 import { Source } from './plugins/source/index';
-import { RemoveBlockStyle } from './plugins/removeStyle/index';
+import { RemoveBlockStyle } from './plugins/removeBlockStyle/index';
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 	public static override builtinPlugins = [
