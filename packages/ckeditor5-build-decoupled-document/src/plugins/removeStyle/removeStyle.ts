@@ -6,41 +6,32 @@ import minimizeIcon from './minimize.svg';
 export default class RemoveStyle extends Plugin {
 	public init(): void {
 		const editor = this.editor;
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore
-		if (
-			editor.config._config.removeStyle &&
-			editor.config._config.removeStyle.onOpen
-		) {
-			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-			// @ts-ignore
-			const open = editor.config._config.removeStyle.onOpen;
-			// The button must be registered among the UI components of the editor
-			// to be displayed in the toolbar.
-			editor.ui.componentFactory.add('removeStyle', () => {
-				// The button will be an instance of ButtonView.
-				const button = new ButtonView();
-				let isActive = false;
+		const open = editor.config._config.removeStyle.onOpen;
+		// The button must be registered among the UI components of the editor
+		// to be displayed in the toolbar.
+		editor.ui.componentFactory.add('removeStyle', () => {
+			// The button will be an instance of ButtonView.
+			const button = new ButtonView();
+			let isActive = false;
+			button.set({
+				label: 'RemoveStyle',
+				withText: false,
+				tooltip: true,
+				icon: maximizeIcon,
+			});
+
+			button.on('execute', () => {
+				open();
+				isActive = !isActive;
+
 				button.set({
 					label: 'RemoveStyle',
 					withText: false,
-					tooltip: true,
-					icon: maximizeIcon,
+					icon: isActive ? minimizeIcon : maximizeIcon,
 				});
-
-				button.on('execute', () => {
-					open();
-					isActive = !isActive;
-
-					button.set({
-						label: 'RemoveStyle',
-						withText: false,
-						icon: isActive ? minimizeIcon : maximizeIcon,
-					});
-				});
-
-				return button;
 			});
-		}
+
+			return button;
+		});
 	}
 }
