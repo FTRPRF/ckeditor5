@@ -13,7 +13,7 @@ export default class RemoveStyle extends Plugin {
 		// The button must be registered among the UI components of the editor
 		// to be displayed in the toolbar.
 		editor.ui.componentFactory.add('removeStyle', () => {
-			let isActive = false
+			let isActive = false;
 			// The button will be an instance of ButtonView.
 			const button = new ButtonView();
 			button.set({
@@ -25,7 +25,7 @@ export default class RemoveStyle extends Plugin {
 
 			button.on('execute', () => {
 				isActive ? close() : open();
-				isActive = !isActive
+				isActive = !isActive;
 				button.set({
 					label: 'Remove Style',
 					withText: false,
