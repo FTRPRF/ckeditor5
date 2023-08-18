@@ -6,6 +6,7 @@ import minimizeIcon from './minimize.svg';
 export default class RemoveStyle extends Plugin {
 	public init(): void {
 		const editor = this.editor;
+		// @ts-ignore
 		const open = editor.config._config.removeStyle.onOpen;
 		// The button must be registered among the UI components of the editor
 		// to be displayed in the toolbar.
