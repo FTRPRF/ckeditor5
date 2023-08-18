@@ -178,6 +178,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'removeFormat',
 				'|',
 				'style',
+				'removeBlockStyle',
 				'|',
 				'iframe',
 				'scratchBlocks',
@@ -187,7 +188,6 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'styledLink',
 				'fullScreen',
 				'source',
-				'removeBlockStyle',
 			],
 		},
 		image: {
