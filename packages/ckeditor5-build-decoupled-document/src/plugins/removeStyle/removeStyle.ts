@@ -17,7 +17,7 @@ export default class RemoveStyle extends Plugin {
 			// The button will be an instance of ButtonView.
 			const button = new ButtonView();
 			button.set({
-				label: 'RemoveStyle',
+				label: 'Remove Style',
 				withText: false,
 				tooltip: true,
 				icon,
@@ -27,7 +27,7 @@ export default class RemoveStyle extends Plugin {
 				isActive ? close() : open();
 				isActive = !isActive
 				button.set({
-					label: 'RemoveStyle',
+					label: 'Remove Style',
 					withText: false,
 					icon: isActive ? iconActive : icon,
 				});
