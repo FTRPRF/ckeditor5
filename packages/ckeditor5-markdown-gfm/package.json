@@ -24,7 +24,7 @@
     "@ckeditor/ckeditor5-dev-utils": "^38.0.0",
     "@ckeditor/ckeditor5-editor-classic": "38.1.0",
     "@ckeditor/ckeditor5-engine": "38.1.0",
-    "@ckeditor/ckeditor5-list": "38.1.0",
+    "@ckeditor/ckeditor5-list": "40.1.0",
     "@ckeditor/ckeditor5-table": "38.1.0",
     "@ckeditor/ckeditor5-theme-lark": "38.1.0",
     "@types/marked": "^4.0.8",
