@@ -45,7 +45,7 @@ import {
 } from '@ckeditor/ckeditor5-image';
 import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
-import { DocumentList, ListProperties } from '@ckeditor/ckeditor5-list';
+import { DocumentList, DocumentListProperties } from '@ckeditor/ckeditor5-list';
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
 import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
@@ -119,7 +119,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		Italic,
 		Link,
 		DocumentList,
-		ListProperties,
+		DocumentListProperties,
 		MediaEmbed,
 		Modal,
 		Paragraph,
