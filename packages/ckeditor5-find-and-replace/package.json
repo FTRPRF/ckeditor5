@@ -29,7 +29,7 @@
     "@ckeditor/ckeditor5-font": "38.1.0",
     "@ckeditor/ckeditor5-highlight": "38.1.0",
     "@ckeditor/ckeditor5-link": "38.1.0",
-    "@ckeditor/ckeditor5-list": "40.1.0",
+    "@ckeditor/ckeditor5-list": "38.1.0",
     "@ckeditor/ckeditor5-paragraph": "38.1.0",
     "@ckeditor/ckeditor5-source-editing": "38.1.0",
     "@ckeditor/ckeditor5-theme-lark": "38.1.0",
