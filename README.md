@@ -1,6 +1,6 @@
 This repo uses action secrets to upload a build of the ckeditor to Azure.
 
-CKEditor&nbsp;5 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20CKEditor%205%20on%20GitHub&url=https%3A%2F%2Fgithub.com%2Fckeditor%2Fckeditor5)
+CKEditor5 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20CKEditor%205%20on%20GitHub&url=https%3A%2F%2Fgithub.com%2Fckeditor%2Fckeditor5)
 
 [![npm version](https://badge.fury.io/js/ckeditor5.svg)](https://www.npmjs.com/package/ckeditor5)
 [![Coverage Status](https://coveralls.io/repos/github/ckeditor/ckeditor5/badge.svg?branch=master)](https://coveralls.io/github/ckeditor/ckeditor5?branch=master)
@@ -10,21 +10,21 @@ CKEditor&nbsp;5 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg
 [![Join newsletter](https://img.shields.io/badge/join-newsletter-00cc99.svg)](http://eepurl.com/c3zRPr)
 [![Follow Twitter](https://img.shields.io/badge/follow-twitter-00cc99.svg)](https://twitter.com/ckeditor)
 
-CKEditor&nbsp;5 is an ultra-modern JavaScript rich-text editor with MVC architecture, a custom data model, and virtual DOM. It is written from scratch in TypeScript and has excellent webpack and Vite support. It provides every type of WYSIWYG editing solution imaginable with extensive collaboration support. From editors similar to Google Docs and Medium to Slack or Twitter-like applications, all is possible within a single editing framework. As a market leader, it is constantly expanded and updated.
+CKEditor5 is an ultra-modern JavaScript rich-text editor with MVC architecture, a custom data model, and virtual DOM. It is written from scratch in TypeScript and has excellent webpack and Vite support. It provides every type of WYSIWYG editing solution imaginable with extensive collaboration support. From editors similar to Google Docs and Medium to Slack or Twitter-like applications, all is possible within a single editing framework. As a market leader, it is constantly expanded and updated.
 
 ![A composition of screenshots presenting various features of CKEditor&nbsp;5 rich text editor](https://user-images.githubusercontent.com/1099479/179190754-f4aaf2b3-21cc-49c4-a454-8de4a00cc70e.jpg)
 
 ## Table of contents
 
-- [CKEditor 5 ](#ckeditor5-)
+- [CKEditor5 ](#ckeditor5)
 	- [Table of contents](#table-of-contents)
 	- [Quick start](#quick-start)
-		- [CKEditor 5 online builder](#ckeditor5-online-builder)
-		- [CKEditor 5 predefined builds](#ckeditor5-predefined-builds)
+		- [CKEditor5 online builder](#ckeditor5-online-builder)
+		- [CKEditor5 predefined builds](#ckeditor5-predefined-builds)
 			- [Example installation](#example-installation)
 		- [TypeScript support](#typescript-support)
-		- [CKEditor 5 advanced installation](#ckeditor5-advanced-installation)
-			- [CKEditor 5 Framework](#ckeditor5-framework)
+		- [CKEditor5 advanced installation](#ckeditor5-advanced-installation)
+			- [CKEditor5 Framework](#ckeditor5-framework)
 	- [Documentation and FAQ](#documentation-and-faq)
 	- [Releases](#releases)
 	- [Editing and collaboration features](#editing-and-collaboration-features)
@@ -162,3 +162,11 @@ Licensed under the terms of [GNU General Public License Version 2 or later](http
 ## How to trigger a build
 
 Just push something to development.
+
+## How to sync with the ckeditor5 master branch:
+- create a sync branch based on the ckeditor5 master branch
+- merge our master branch into it
+- resolve merge conflicts
+- confirm everything still works (manual testing I'm afraid)
+- do a little dance
+- get down tonight
