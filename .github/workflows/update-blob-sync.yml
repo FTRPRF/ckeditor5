@@ -3,7 +3,7 @@ name: Update CKEditor 5 blob sync
 on:
     push:
         branches:
-            - Sync
+            - sync
 
 jobs:
     build:
