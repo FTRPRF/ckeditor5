@@ -41,6 +41,7 @@
     "@ckeditor/ckeditor5-essentials": "40.2.0",
     "@ckeditor/ckeditor5-font": "40.2.0",
     "@ckeditor/ckeditor5-heading": "40.2.0",
+    "@ckeditor/ckeditor5-html-support": "40.2.0",
     "@ckeditor/ckeditor5-image": "40.2.0",
     "@ckeditor/ckeditor5-indent": "40.2.0",
     "@ckeditor/ckeditor5-link": "40.2.0",
@@ -48,8 +49,13 @@
     "@ckeditor/ckeditor5-media-embed": "40.2.0",
     "@ckeditor/ckeditor5-paragraph": "40.2.0",
     "@ckeditor/ckeditor5-paste-from-office": "40.2.0",
+    "@ckeditor/ckeditor5-remove-format": "40.2.0",
+    "@ckeditor/ckeditor5-style": "40.2.0",
     "@ckeditor/ckeditor5-table": "40.2.0",
-    "@ckeditor/ckeditor5-typing": "40.2.0"
+    "@ckeditor/ckeditor5-typing": "40.2.0",
+    "@ftrprf/ckeditor5-content-templates": "0.0.1",
+    "@ftrprf/ckeditor5-iframe": "https://github.com/FTRPRF/ckeditor5-iframe.git",
+    "@ftrprf/ckeditor5-scratch-blocks": "0.0.3"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-core": "40.2.0",
