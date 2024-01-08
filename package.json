@@ -110,7 +110,7 @@
     "@ckeditor/ckeditor5-mermaid": "ckeditor/ckeditor5-mermaid#v0.0.2",
     "@ckeditor/ckeditor5-pagination": "40.2.0",
     "@ckeditor/ckeditor5-paste-from-office-enhanced": "40.2.0",
-    "@ckeditor/ckeditor5-react": "6.2.0",
+    "@ckeditor/ckeditor5-react": "^6.0.0",
     "@ckeditor/ckeditor5-real-time-collaboration": "40.2.0",
     "@ckeditor/ckeditor5-revision-history": "40.2.0",
     "@ckeditor/ckeditor5-slash-command": "40.2.0",
