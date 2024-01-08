@@ -18,7 +18,7 @@ jobs:
                   registry-url: "https://npm.pkg.github.com"
                   scope: "@ftrprf"
             - name: Build editor
-              run: cd ./packages/ckeditor5-build-decoupled-document && pwd && npm install && npm run build
+              run: cd ./packages/ckeditor5-build-decoupled-document && pwd && yarn install && yarn build
               env:
                   NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
             - name: upload to storage
