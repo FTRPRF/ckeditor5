@@ -49,7 +49,9 @@ import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
 
+// eslint-disable-next-line ckeditor5-rules/allow-imports-only-from-main-package-entry-point
 import ClickObserver from '@ckeditor/ckeditor5-engine/src/view/observer/clickobserver.js';
+// eslint-disable-next-line ckeditor5-rules/allow-imports-only-from-main-package-entry-point
 import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support/src/index.js';
 // @ts-ignore
 import { Iframe } from '@ftrprf/ckeditor5-iframe/src/index.js';
@@ -66,6 +68,7 @@ import { StyledLink } from './plugins/styledLink/index.js';
 // @ts-ignore
 import { FullScreen } from './plugins/fullScreen/index.js';
 import { Source } from './plugins/source/index.js';
+import { Image as OwnImagePlugin } from './plugins/image/index.js';
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 	public static override builtinPlugins = [
@@ -120,7 +123,8 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		Modal,
 		StyledLink,
 		FullScreen,
-		Source
+		Source,
+		OwnImagePlugin
 	];
 
 	public static override defaultConfig = {
@@ -243,7 +247,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				integrations: [
 					'url'
 				]
-			},
+			}
 		},
 		table: {
 			contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells' ]
