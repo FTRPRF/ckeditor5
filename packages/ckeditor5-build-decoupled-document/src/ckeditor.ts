@@ -238,7 +238,12 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'toggleImageCaption',
 				'imageTextAlternative',
 				'imageResize'
-			]
+			],
+			insert: {
+				integrations: [
+					'url'
+				]
+			},
 		},
 		table: {
 			contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells' ]
