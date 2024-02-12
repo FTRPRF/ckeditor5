@@ -61,10 +61,6 @@ import ClickObserver from '@ckeditor/ckeditor5-engine/src/view/observer/clickobs
 // eslint-disable-next-line ckeditor5-rules/allow-imports-only-from-main-package-entry-point
 import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support/src/index.js';
 // @ts-ignore
-import { Iframe } from '@ftrprf/ckeditor5-iframe/src/index.js';
-// @ts-ignore
-import { ScratchBlocks } from '@ftrprf/ckeditor5-scratch-blocks/src/index.js';
-// @ts-ignore
 import { contentTemplates as ContentTemplates } from '@ftrprf/ckeditor5-content-templates/src/index.js';
 // @ts-ignore
 import { Exercise } from './plugins/exercise/index.js';
@@ -75,7 +71,6 @@ import { StyledLink } from './plugins/styledLink/index.js';
 // @ts-ignore
 import { FullScreen } from './plugins/fullScreen/index.js';
 import { Source } from './plugins/source/index.js';
-import { Image as OwnImagePlugin } from './plugins/image/index.js';
 import { RemoveBlockStyle } from './plugins/removeBlockStyle/index.js';
 import { HtmlInsert } from './plugins/htmlInsert/index.js';
 
@@ -110,7 +105,6 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		GeneralHtmlSupport,
 		Heading,
 		HtmlInsert,
-		Iframe,
 		Image,
 		ImageCaption,
 		ImageInsert,
@@ -126,13 +120,11 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		ListProperties,
 		MediaEmbed,
 		Modal,
-		OwnImagePlugin,
 		Paragraph,
 		PasteFromOffice,
 		PictureEditing,
 		RemoveBlockStyle,
 		RemoveFormat,
-		ScratchBlocks,
 		Source,
 		Strikethrough,
 		Style,
@@ -174,7 +166,6 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'indent',
 				'|',
 				'link',
-				'ownImagePlugin',
 				'insertTable',
 				'ownImagePlugin',
 				'mediaEmbed',
@@ -188,9 +179,6 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'style',
 				'removeBlockStyle',
 				'|',
-				'iframe',
-				'scratchBlocks',
-				'contentTemplates',
 				'exercise',
 				'modal',
 				'styledLink',
