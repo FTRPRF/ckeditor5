@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -56,11 +56,6 @@ describe( 'InlineEditor', () => {
 
 		it( 'uses HTMLDataProcessor', () => {
 			expect( editor.data.processor ).to.be.instanceof( HtmlDataProcessor );
-		} );
-
-		it( 'mixes DataApiMixin', () => {
-			expect( InlineEditor.prototype ).have.property( 'setData' ).to.be.a( 'function' );
-			expect( InlineEditor.prototype ).have.property( 'getData' ).to.be.a( 'function' );
 		} );
 
 		it( 'mixes ElementApiMixin', () => {
@@ -426,7 +421,7 @@ describe( 'InlineEditor', () => {
 					plugins: [ ArticlePluginSet ],
 					toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
 					image: {
-						toolbar: [ 'imageStyle:block', 'imageStyle:side', '|', 'imageTextAlternative' ]
+						toolbar: [ 'imageStyle:block', 'imageStyle:wrapText', '|', 'imageTextAlternative' ]
 					}
 				} ) );
 	} );

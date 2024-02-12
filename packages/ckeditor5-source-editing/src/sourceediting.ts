@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -10,8 +10,8 @@
 /* global console */
 
 import { type Editor, Plugin, PendingActions } from 'ckeditor5/src/core.js';
-import { ButtonView } from 'ckeditor5/src/ui.js';
-import { createElement, ElementReplacer } from 'ckeditor5/src/utils.js';
+import { ButtonView, type Dialog } from 'ckeditor5/src/ui.js';
+import { CKEditorError, createElement, ElementReplacer } from 'ckeditor5/src/utils.js';
 import { formatHtml } from './utils/formathtml.js';
 
 import '../theme/sourceediting.css';
@@ -74,12 +74,16 @@ export default class SourceEditing extends Plugin {
 		this._elementReplacer = new ElementReplacer();
 		this._replacedRoots = new Map();
 		this._dataFromRoots = new Map();
+
+		editor.config.define( 'sourceEditing.allowCollaborationFeatures', false );
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public init(): void {
+		this._checkCompatibility();
+
 		const editor = this.editor;
 		const t = editor.t;
 
@@ -134,6 +138,7 @@ export default class SourceEditing extends Plugin {
 		if ( this._isAllowedToHandleSourceEditingMode() ) {
 			this.on( 'change:isSourceEditingMode', ( evt, name, isSourceEditingMode ) => {
 				if ( isSourceEditingMode ) {
+					this._hideVisibleDialog();
 					this._showSourceEditing();
 					this._disableCommands();
 				} else {
@@ -156,38 +161,6 @@ export default class SourceEditing extends Plugin {
 	}
 
 	/**
-	 * @inheritDoc
-	 */
-	public afterInit(): void {
-		const editor = this.editor;
-
-		const collaborationPluginNamesToWarn = [
-			'RealTimeCollaborativeEditing',
-			'CommentsEditing',
-			'TrackChangesEditing',
-			'RevisionHistory'
-		];
-
-		// Currently, the basic integration with Collaboration Features is to display a warning in the console.
-		if ( collaborationPluginNamesToWarn.some( pluginName => editor.plugins.has( pluginName ) ) ) {
-			console.warn(
-				'You initialized the editor with the source editing feature and at least one of the collaboration features. ' +
-				'Please be advised that the source editing feature may not work, and be careful when editing document source ' +
-				'that contains markers created by the collaboration features.'
-			);
-		}
-
-		// Restricted Editing integration can also lead to problems. Warn the user accordingly.
-		if ( editor.plugins.has( 'RestrictedEditingModeEditing' ) ) {
-			console.warn(
-				'You initialized the editor with the source editing feature and restricted editing feature. ' +
-				'Please be advised that the source editing feature may not work, and be careful when editing document source ' +
-				'that contains markers created by the restricted editing feature.'
-			);
-		}
-	}
-
-	/**
 	 * Updates the source data in all hidden editing roots.
 	 */
 	public updateEditorData(): void {
@@ -207,7 +180,56 @@ export default class SourceEditing extends Plugin {
 		}
 
 		if ( Object.keys( data ).length ) {
-			editor.data.set( data, { batchType: { isUndoable: true } } );
+			editor.data.set( data, { batchType: { isUndoable: true }, suppressErrorInCollaboration: true } );
+		}
+	}
+
+	private _checkCompatibility() {
+		const editor = this.editor;
+		const allowCollaboration = editor.config.get( 'sourceEditing.allowCollaborationFeatures' );
+
+		if ( !allowCollaboration && editor.plugins.has( 'RealTimeCollaborativeEditing' ) ) {
+			/**
+			 * Source editing feature is not fully compatible with real-time collaboration,
+			 * and using it may lead to data loss. Please read
+			 * {@glink features/source-editing#limitations-and-incompatibilities source editing feature guide} to learn more.
+			 *
+			 * If you understand the possible risk of data loss, you can enable the source editing
+			 * by setting the
+			 * {@link module:source-editing/sourceeditingconfig~SourceEditingConfig#allowCollaborationFeatures}
+			 * configuration flag to `true`.
+			 *
+			 * @error source-editing-incompatible-with-real-time-collaboration
+			 */
+			throw new CKEditorError( 'source-editing-incompatible-with-real-time-collaboration', null );
+		}
+
+		const collaborationPluginNamesToWarn = [
+			'CommentsEditing',
+			'TrackChangesEditing',
+			'RevisionHistory'
+		];
+
+		// Currently, the basic integration with Collaboration Features is to display a warning in the console.
+		//
+		// If `allowCollaboration` flag is set, do not show these warnings. If the flag is set, we assume that the integrator read
+		// appropriate section of the guide so there's no use to spam the console with warnings.
+		//
+		if ( !allowCollaboration && collaborationPluginNamesToWarn.some( pluginName => editor.plugins.has( pluginName ) ) ) {
+			console.warn(
+				'You initialized the editor with the source editing feature and at least one of the collaboration features. ' +
+				'Please be advised that the source editing feature may not work, and be careful when editing document source ' +
+				'that contains markers created by the collaboration features.'
+			);
+		}
+
+		// Restricted Editing integration can also lead to problems. Warn the user accordingly.
+		if ( editor.plugins.has( 'RestrictedEditingModeEditing' ) ) {
+			console.warn(
+				'You initialized the editor with the source editing feature and restricted editing feature. ' +
+				'Please be advised that the source editing feature may not work, and be careful when editing document source ' +
+				'that contains markers created by the restricted editing feature.'
+			);
 		}
 	}
 
@@ -368,6 +390,19 @@ export default class SourceEditing extends Plugin {
 
 		// Checks, if the editor's editable belongs to the editor's DOM tree.
 		return editable && !editable.hasExternalElement;
+	}
+
+	/**
+	 * If any {@link module:ui/dialog/dialogview~DialogView editor dialog} is currently visible, hide it.
+	 */
+	private _hideVisibleDialog(): void {
+		if ( this.editor.plugins.has( 'Dialog' ) ) {
+			const dialogPlugin: Dialog = this.editor.plugins.get( 'Dialog' );
+
+			if ( dialogPlugin.isOpen ) {
+				dialogPlugin.hide();
+			}
+		}
 	}
 }
 

@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -7,7 +7,6 @@
 
 import Editor from '../../src/editor/editor.js';
 import ElementApiMixin from '../../src/editor/utils/elementapimixin.js';
-import DataApiMixin from '../../src/editor/utils/dataapimixin.js';
 import EditorUI from '@ckeditor/ckeditor5-ui/src/editorui/editorui.js';
 import BoxedEditorUIView from '@ckeditor/ckeditor5-ui/src/editorui/boxed/boxededitoruiview.js';
 import ElementReplacer from '@ckeditor/ckeditor5-utils/src/elementreplacer.js';
@@ -22,7 +21,7 @@ import CKEditorError from '@ckeditor/ckeditor5-utils/src/ckeditorerror.js';
  * @memberOf tests.core._utils
  * @extends core.editor.Editor
  */
-export default class ClassicTestEditor extends DataApiMixin( ElementApiMixin( Editor ) ) {
+export default class ClassicTestEditor extends ElementApiMixin( Editor ) {
 	/**
 	 * @inheritDoc
 	 */

@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -72,7 +72,7 @@ export * from './dom/scroll.js';
 
 export * from './keyboard.js';
 export * from './language.js';
-export { default as Locale, type LocaleTranslate } from './locale.js';
+export { default as Locale, type LocaleTranslate, type Translations } from './locale.js';
 export {
 	default as Collection,
 	type CollectionAddEvent,

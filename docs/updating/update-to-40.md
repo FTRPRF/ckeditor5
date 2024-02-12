@@ -15,6 +15,8 @@ order: 84
 
 ## Update to CKEditor&nbsp;5 v40.2.0
 
+_Released on December 12, 2023._
+
 For the entire list of changes introduced in version 40.2.0, see the [release notes for CKEditor&nbsp;5 v40.2.0](https://github.com/ckeditor/ckeditor5/releases/tag/v40.2.0).
 
 Listed below are the most important changes that require your attention when upgrading to CKEditor&nbsp;5 v40.2.0.
@@ -23,7 +25,7 @@ Listed below are the most important changes that require your attention when upg
 
 The below information affects all editor integrations that use the {@link features/ai-assistant-integration AI Assistant} feature.
 
-We added support for the AWS Bedrock service and for providing custom adapters that may extend our solutions or connect to a custom model. To enable this, we needed to refactor the feature's plugin architecture and configuration structure. However, we hope it makes CKEditor ready to provide new AI-related features in the future without introducing more breaking changes.
+We added support for the Amazon Bedrock service and for providing custom adapters that may extend our solutions or connect to a custom model. To enable this, we needed to refactor the feature's plugin architecture and configuration structure. However, we hope it makes CKEditor ready to provide new AI-related features in the future without introducing more breaking changes.
 
 Before, the OpenAI adapter was automatically required by the `AIAssistant` plugin. Now, the integrator must explicitly add the chosen adapter to the list of plugins:
 
@@ -48,7 +50,7 @@ Another change is related to the {@link module:ai/aiassistant~AIAssistantConfig 
 * We introduced a new {@link module:ai/aiconfig~AIConfig `config.ai`} namespace.
 * We moved the `config.aiAssistant` option into {@link module:ai/aiassistant~AIAssistantConfig `config.ai.aiAssistant`}.
 * We extracted adapter-related properties to {@link module:ai/adapters/openaitextadapter~OpenAITextAdapterConfig `config.ai.openAI`}.
-* Also, we renamed some of the properties.
+* Also, we renamed some properties.
 
 ```js
 // Before:
@@ -199,13 +201,15 @@ The `insertImageViaUrl` configuration option was unused and was removed. If you 
 
 ## Update to CKEditor&nbsp;5 v40.1.0
 
+_Released on November 15, 2023._
+
 For the entire list of changes introduced in version 40.1.0, see the [release notes for CKEditor&nbsp;5 v40.1.0](https://github.com/ckeditor/ckeditor5/releases/tag/v40.1.0).
 
 Listed below are the most important changes that require your attention when upgrading to CKEditor&nbsp;5 v40.1.0.
 
 ### Changes to the default insert image action
 
-We changed how the images are inserted by default. For a long time, the image insert action detected where the selection is placed, and depending on that inserted an inline image or a block one. This sometimes caused confusion and led to suboptimal experience. From now on, the images will be inserted as block ones by default.
+We changed how the images are inserted by default. For a long time, the image insert action detected where the user placed the selection. Depending on that, the editor inserted an inline image or a block one. This sometimes caused confusion and led to suboptimal experiences. From now on, the images will be inserted as block ones by default.
 
 Changes introduced in the latest version affect the {@link module:image/imageconfig~ImageInsertConfig#type `image.insert.type`} configuration setting. It lets the integrators set up how to handle newly uploaded or pasted images in the editor content.
 
@@ -238,6 +242,8 @@ If you omit the `type` setting in the configuration, the behavior defaults to in
 The {@link features/images-text-alternative image text alternative} (the `alt` attribute) helps screen reader users navigate and understand the document. We have updated the toolbar icon {@icon @ckeditor/ckeditor5-core/theme/icons/text-alternative.svg Alternative text} to be more intuitive and easier to recognize, following global standards.
 
 ## Update to CKEditor&nbsp;5 v40.0.0
+
+_Released on October 4, 2023._
 
 For the entire list of changes introduced in version 40.0.0, see the [release notes for CKEditor&nbsp;5 v40.0.0](https://github.com/ckeditor/ckeditor5/releases/tag/v40.0.0).
 

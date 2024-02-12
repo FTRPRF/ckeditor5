@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -22,7 +22,7 @@ ClassicEditor
 		},
 		image: {
 			toolbar: [
-				'imageStyle:inline', 'imageStyle:block', 'imageStyle:side', '|',
+				'imageStyle:inline', 'imageStyle:block', 'imageStyle:wrapText', '|',
 				'toggleImageCaption', 'imageTextAlternative', 'ckboxImageEdit'
 			]
 		},

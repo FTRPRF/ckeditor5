@@ -21,7 +21,7 @@ Later you will also learn about the **editing UI**, but for now, all you need to
 
 ### Model
 
-The first and most important part of the editing engine is the model. The model is an HTML-like structure that represents the content of the editor. When the {@link module:core/editor/utils/dataapimixin~DataApi#setData `editor.setData()`} method is called, HTML passed as the argument is converted into the model. Then, when the {@link module:core/editor/utils/dataapimixin~DataApi#getData `model.getData()`} method is called, the model is converted back to HTML.
+The first and most important part of the editing engine is the model. The model is an HTML-like structure that represents the content of the editor. When the {@link module:core/editor/editor~Editor#setData `editor.setData()`} method is called, HTML passed as the argument is converted into the model. Then, when the {@link module:core/editor/editor~Editor#getData `model.getData()`} method is called, the model is converted back to HTML.
 
 One major difference between the model and HTML is that in the model, both text and elements can have attributes.
 
@@ -93,7 +93,7 @@ import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 CKEditorInspector.attach(editor);
 ```
 
-When the page refreshes, you should see a debugging panel for CKEditor. Go to the `Schema` tab and click on the `$text` element. On the right side you should see `highlight:true` under the `Allowed Attributes` section.
+When the page refreshes, you should see a debugging panel for CKEditor. Go to the `Schema` tab and click the `$text` element. On the right side you should see `highlight:true` under the `Allowed Attributes` section.
 
 Go to the `Model` tab and re-run this code in the console:
 

@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -10,7 +10,6 @@
 import {
 	Editor,
 	Context,
-	DataApiMixin,
 	secureSourceElement,
 	type EditorConfig,
 	type EditorReadyEvent
@@ -68,7 +67,7 @@ import {
  * Read more about initializing the editor from source or as a build in
  * {@link module:editor-multi-root/multirooteditor~MultiRootEditor.create `MultiRootEditor.create()`}.
  */
-export default class MultiRootEditor extends DataApiMixin( Editor ) {
+export default class MultiRootEditor extends Editor {
 	/**
 	 * @inheritDoc
 	 */
