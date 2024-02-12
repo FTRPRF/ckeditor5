@@ -71,6 +71,7 @@ import { StyledLink } from './plugins/styledLink/index.js';
 // @ts-ignore
 import { FullScreen } from './plugins/fullScreen/index.js';
 import { Source } from './plugins/source/index.js';
+import { Image as OwnImagePlugin } from './plugins/image/index.js';
 import { RemoveBlockStyle } from './plugins/removeBlockStyle/index.js';
 import { HtmlInsert } from './plugins/htmlInsert/index.js';
 
@@ -120,6 +121,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		ListProperties,
 		MediaEmbed,
 		Modal,
+		OwnImagePlugin,
 		Paragraph,
 		PasteFromOffice,
 		PictureEditing,
@@ -166,6 +168,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'indent',
 				'|',
 				'link',
+				'ownImagePlugin',
 				'insertTable',
 				'ownImagePlugin',
 				'mediaEmbed',
