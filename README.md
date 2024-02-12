@@ -169,7 +169,7 @@ Just push something to development.
 See also: https://levelup.gitconnected.com/how-to-update-fork-repo-from-original-repo-b853387dd471
 - create a sync branch based on the ckeditor5 master branch
 - merge our master branch into it
-- resolve merge conflicts
+- resolve merge conflicts, pay special attention to all files in ckeditor5-build-decoupled-document
 - confirm everything still works (manual testing I'm afraid)
 - do a little dance
 - get down tonight
