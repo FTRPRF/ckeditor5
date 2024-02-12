@@ -15,10 +15,6 @@ The CKEditor&nbsp;5 testing environment uses a popular setup with [Karma](https:
 
 Each CKEditor&nbsp;5 package has its own tests suite (see for example the [engine's tests](https://github.com/ckeditor/ckeditor5/tree/master/packages/ckeditor5-engine/tests)). However, the test runner is available in the root of the [`ckeditor5`](https://github.com/ckeditor/ckeditor5) repository which is the central development environment. The actual code of the test runner is implemented in the [`@ckeditor/ckeditor5-dev-tests`](https://www.npmjs.com/package/@ckeditor/ckeditor5-dev-tests) package and can be reused outside of `ckeditor5`.
 
-<info-box hint>
-	Both automated and manual tests support TypeScript. Simply use the `.ts` extension.
-</info-box>
-
 ## Running automated tests
 
 To run the automated tests, use the `yarn run test [<args>...]` command.
