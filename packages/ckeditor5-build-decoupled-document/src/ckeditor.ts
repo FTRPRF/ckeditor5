@@ -40,7 +40,7 @@ import {
 } from '@ckeditor/ckeditor5-image';
 import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
-import { DocumentList, DocumentListProperties } from '@ckeditor/ckeditor5-list';
+import { List, ListProperties } from '@ckeditor/ckeditor5-list';
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
 import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
@@ -48,7 +48,7 @@ import {
 	Table,
 	TableToolbar,
 	TableProperties,
-	TableCellProperties,
+	TableCellProperties
 } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
@@ -122,8 +122,8 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		IndentBlock,
 		Italic,
 		Link,
-		DocumentList,
-		DocumentListProperties,
+		List,
+		ListProperties,
 		MediaEmbed,
 		Modal,
 		OwnImagePlugin,
@@ -145,7 +145,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		TableProperties,
 		TableToolbar,
 		TextTransformation,
-		Underline,
+		Underline
 	];
 
 	public static override defaultConfig = {
@@ -196,8 +196,8 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'styledLink',
 				'fullScreen',
 				'source',
-				'htmlInsert',
-			],
+				'htmlInsert'
+			]
 		},
 		image: {
 			resizeUnit: 'px' as const,
@@ -292,8 +292,8 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				{ language: 'python', label: 'Python' },
 				{ language: 'json', label: 'JSON' },
 				{ language: 'markdown', label: 'Markdown' },
-				{ language: 'blocks', label: 'Scratch' },
-			],
+				{ language: 'blocks', label: 'Scratch' }
+			]
 		},
 
 		// This value must be kept in sync with the language defined in webpack.config.js.
