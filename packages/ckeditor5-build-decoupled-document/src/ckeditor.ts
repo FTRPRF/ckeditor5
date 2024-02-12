@@ -61,6 +61,8 @@ import ClickObserver from '@ckeditor/ckeditor5-engine/src/view/observer/clickobs
 // eslint-disable-next-line ckeditor5-rules/allow-imports-only-from-main-package-entry-point
 import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support/src/index.js';
 // @ts-ignore
+import { Iframe } from '@ftrprf/ckeditor5-iframe/src/index.js';
+// @ts-ignore
 import { contentTemplates as ContentTemplates } from '@ftrprf/ckeditor5-content-templates/src/index.js';
 // @ts-ignore
 import { Exercise } from './plugins/exercise/index.js';
@@ -106,6 +108,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		GeneralHtmlSupport,
 		Heading,
 		HtmlInsert,
+		Iframe,
 		Image,
 		ImageCaption,
 		ImageInsert,
@@ -182,6 +185,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'style',
 				'removeBlockStyle',
 				'|',
+				'iframe',
 				'exercise',
 				'modal',
 				'styledLink',
