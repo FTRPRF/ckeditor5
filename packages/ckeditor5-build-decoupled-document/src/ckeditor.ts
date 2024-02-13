@@ -76,6 +76,8 @@ import { Source } from './plugins/source/index.js';
 import { Image as OwnImagePlugin } from './plugins/image/index.js';
 import { RemoveBlockStyle } from './plugins/removeBlockStyle/index.js';
 import { HtmlInsert } from './plugins/htmlInsert/index.js';
+// @ts-ignore
+import { ScratchBlocks } from '@ftrprf/ckeditor5-scratch-blocks/src/index.js';
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 	public static override builtinPlugins = [
@@ -130,6 +132,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		PictureEditing,
 		RemoveBlockStyle,
 		RemoveFormat,
+		ScratchBlocks,
 		Source,
 		Strikethrough,
 		Style,
@@ -186,6 +189,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'removeBlockStyle',
 				'|',
 				'iframe',
+				'scratchBlocks',
 				'exercise',
 				'modal',
 				'styledLink',
