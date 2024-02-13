@@ -190,6 +190,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'|',
 				'iframe',
 				'scratchBlocks',
+				'contentTemplates',
 				'exercise',
 				'modal',
 				'styledLink',
