@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -600,6 +600,64 @@ describe( 'UpcastHelpers', () => {
 			expectResult(
 				new ViewAttributeElement( viewDocument, 'img', { 'data-style': 'dark' } ),
 				'<imageBlock styled="dark"></imageBlock>'
+			);
+		} );
+
+		it( 'config.view does not have value set for style key', () => {
+			schema.extend( 'imageBlock', {
+				allowAttributes: [ 'styled' ]
+			} );
+
+			upcastHelpers.attributeToAttribute( {
+				view: 'style',
+				model: 'styled'
+			} );
+
+			// Ensure that proper consumables are consumed.
+			upcastDispatcher.on( 'element', ( evt, data, { consumable } ) => {
+				expect( consumable.test( data.viewItem, { styles: [ 'border', 'padding' ] } ) ).to.be.true;
+				expect( consumable.test( data.viewItem, { styles: [ 'border' ] } ) ).to.be.true;
+				expect( consumable.test( data.viewItem, { styles: [ 'padding' ] } ) ).to.be.true;
+			}, { priority: 'highest' } );
+
+			upcastDispatcher.on( 'element', ( evt, data, { consumable } ) => {
+				expect( consumable.test( data.viewItem, { styles: [ 'border', 'padding' ] } ) ).to.be.false;
+				expect( consumable.test( data.viewItem, { styles: [ 'border' ] } ) ).to.be.false;
+				expect( consumable.test( data.viewItem, { styles: [ 'padding' ] } ) ).to.be.false;
+			}, { priority: 'lowest' } );
+
+			expectResult(
+				new ViewAttributeElement( viewDocument, 'img', { 'style': 'border: 2px solid red; padding: 6px 3px;' } ),
+				'<imageBlock styled="border:2px solid red;padding:6px 3px;"></imageBlock>'
+			);
+		} );
+
+		it( 'config.view does not have value set for class key', () => {
+			schema.extend( 'imageBlock', {
+				allowAttributes: [ 'classNames' ]
+			} );
+
+			upcastHelpers.attributeToAttribute( {
+				view: 'class',
+				model: 'classNames'
+			} );
+
+			// Ensure that proper consumables are consumed.
+			upcastDispatcher.on( 'element', ( evt, data, { consumable } ) => {
+				expect( consumable.test( data.viewItem, { classes: [ 'foo', 'bar' ] } ) ).to.be.true;
+				expect( consumable.test( data.viewItem, { classes: [ 'foo' ] } ) ).to.be.true;
+				expect( consumable.test( data.viewItem, { classes: [ 'bar' ] } ) ).to.be.true;
+			}, { priority: 'highest' } );
+
+			upcastDispatcher.on( 'element', ( evt, data, { consumable } ) => {
+				expect( consumable.test( data.viewItem, { classes: [ 'foo', 'bar' ] } ) ).to.be.false;
+				expect( consumable.test( data.viewItem, { classes: [ 'foo' ] } ) ).to.be.false;
+				expect( consumable.test( data.viewItem, { classes: [ 'bar' ] } ) ).to.be.false;
+			}, { priority: 'lowest' } );
+
+			expectResult(
+				new ViewAttributeElement( viewDocument, 'img', { 'class': 'foo bar' } ),
+				'<imageBlock classNames="foo bar"></imageBlock>'
 			);
 		} );
 

@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -40,7 +40,7 @@ import {
 } from '@ckeditor/ckeditor5-image';
 import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
-import { DocumentList, DocumentListProperties } from '@ckeditor/ckeditor5-list';
+import { List, ListProperties } from '@ckeditor/ckeditor5-list';
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
 import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
@@ -63,8 +63,6 @@ import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support/src/index.j
 // @ts-ignore
 import { Iframe } from '@ftrprf/ckeditor5-iframe/src/index.js';
 // @ts-ignore
-import { ScratchBlocks } from '@ftrprf/ckeditor5-scratch-blocks/src/index.js';
-// @ts-ignore
 import { contentTemplates as ContentTemplates } from '@ftrprf/ckeditor5-content-templates/src/index.js';
 // @ts-ignore
 import { Exercise } from './plugins/exercise/index.js';
@@ -78,6 +76,8 @@ import { Source } from './plugins/source/index.js';
 import { Image as OwnImagePlugin } from './plugins/image/index.js';
 import { RemoveBlockStyle } from './plugins/removeBlockStyle/index.js';
 import { HtmlInsert } from './plugins/htmlInsert/index.js';
+// @ts-ignore
+import { ScratchBlocks } from '@ftrprf/ckeditor5-scratch-blocks/src/index.js';
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 	public static override builtinPlugins = [
@@ -122,8 +122,8 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		IndentBlock,
 		Italic,
 		Link,
-		DocumentList,
-		DocumentListProperties,
+		List,
+		ListProperties,
 		MediaEmbed,
 		Modal,
 		OwnImagePlugin,
@@ -174,9 +174,9 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'indent',
 				'|',
 				'link',
+				'ownImagePlugin',
 				'insertTable',
 				'ownImagePlugin',
-				'insertImage',
 				'mediaEmbed',
 				'codeBlock',
 				'|',

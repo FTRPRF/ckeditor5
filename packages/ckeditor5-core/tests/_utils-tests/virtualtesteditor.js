@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -28,11 +28,6 @@ describe( 'VirtualTestEditor', () => {
 			const editor = new VirtualTestEditor();
 
 			expect( editor.model.document.getRoot( 'main' ) ).to.instanceof( RootElement );
-		} );
-
-		it( 'mixes DataApiMixin', () => {
-			expect( VirtualTestEditor.prototype ).have.property( 'setData' ).to.be.a( 'function' );
-			expect( VirtualTestEditor.prototype ).have.property( 'getData' ).to.be.a( 'function' );
 		} );
 	} );
 

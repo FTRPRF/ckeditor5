@@ -26,7 +26,7 @@ How to understand this demo:
 * You will be asked whether you want to leave the page if an image is being uploaded or the data has not been saved successfully yet. You can test that by dropping a big image into the editor or changing the "HTTP server lag" to a high value (for example, 9000ms) and typing something. These actions will make the editor busy for a longer time &ndash; try leaving the page then.
 
 <info-box info>
-	This demo only presents a limited set of features. Visit the {@link examples/builds/full-featured-editor feature-rich editor example} to see more in action.
+	This demo presents a limited set of features. Visit the {@link examples/builds/full-featured-editor feature-rich editor example} to see more in action.
 </info-box>
 
 ## Installation
@@ -34,6 +34,14 @@ How to understand this demo:
 <info-box>
 	This plugin is not enabled in any of the {@link installation/getting-started/predefined-builds predefined builds}, so you need to {@link installation/plugins/installing-plugins install it} by hand.
 </info-box>
+
+To add the autosave feature to your editor install the [`@ckeditor/ckeditor5-autosave`](https://www.npmjs.com/package/@ckeditor/ckeditor5-autosave) package:
+
+```
+npm install --save @ckeditor/ckeditor5-autosave
+```
+
+And add the plugin to your plugin list.
 
 Assuming that you have implemented some form of the `saveData()` function that sends the data to your server and returns a promise which is resolved once the data is successfully saved, configuring the {@link module:autosave/autosave~Autosave} feature is simple:
 
