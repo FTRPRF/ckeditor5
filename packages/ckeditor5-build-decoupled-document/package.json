@@ -55,7 +55,7 @@
     "@ckeditor/ckeditor5-typing": "41.1.0",
     "@ftrprf/ckeditor5-content-templates": "0.0.1",
     "@ftrprf/ckeditor5-iframe": "https://github.com/FTRPRF/ckeditor5-iframe.git",
-    "@ftrprf/ckeditor5-scratch-blocks": "0.0.6"
+    "@ftrprf/ckeditor5-scratch-blocks": "0.0.7"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-core": "41.1.0",
