@@ -176,7 +176,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'link',
 				'ownImagePlugin',
 				'insertTable',
-				'image',
+				'insertImage',
 				'mediaEmbed',
 				'codeBlock',
 				'|',
