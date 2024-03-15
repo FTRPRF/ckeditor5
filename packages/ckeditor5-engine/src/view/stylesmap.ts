@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -303,7 +303,7 @@ export default class StylesMap {
 			return '';
 		}
 
-		return this._getStylesEntries()
+		return this.getStylesEntries()
 			.map( arr => arr.join( ':' ) )
 			.sort()
 			.join( ';' ) + ';';
@@ -411,7 +411,7 @@ export default class StylesMap {
 			return this._styleProcessor.getStyleNames( this._styles );
 		}
 
-		const entries = this._getStylesEntries();
+		const entries = this.getStylesEntries();
 
 		return entries.map( ( [ key ] ) => key );
 	}
@@ -426,7 +426,7 @@ export default class StylesMap {
 	/**
 	 * Returns normalized styles entries for further processing.
 	 */
-	private _getStylesEntries(): Array<PropertyDescriptor> {
+	public getStylesEntries(): Array<PropertyDescriptor> {
 		const parsed: Array<PropertyDescriptor> = [];
 
 		const keys = Object.keys( this._styles );

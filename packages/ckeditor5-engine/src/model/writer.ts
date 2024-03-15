@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -1067,7 +1067,7 @@ export default class Writer {
 	 *
 	 * The `options.affectsData` parameter, which defaults to `false`, allows you to define if a marker affects the data. It should be
 	 * `true` when the marker change changes the data returned by the
-	 * {@link module:core/editor/utils/dataapimixin~DataApi#getData `editor.getData()`} method.
+	 * {@link module:core/editor/editor~Editor#getData `editor.getData()`} method.
 	 * When set to `true` it fires the {@link module:engine/model/document~Document#event:change:data `change:data`} event.
 	 * When set to `false` it fires the {@link module:engine/model/document~Document#event:change `change`} event.
 	 *
@@ -1166,7 +1166,7 @@ export default class Writer {
 	 *
 	 * The `options.affectsData` parameter, which defaults to `false`, allows you to define if a marker affects the data. It should be
 	 * `true` when the marker change changes the data returned by
-	 * the {@link module:core/editor/utils/dataapimixin~DataApi#getData `editor.getData()`} method.
+	 * the {@link module:core/editor/editor~Editor#getData `editor.getData()`} method.
 	 * When set to `true` it fires the {@link module:engine/model/document~Document#event:change:data `change:data`} event.
 	 * When set to `false` it fires the {@link module:engine/model/document~Document#event:change `change`} event.
 	 *

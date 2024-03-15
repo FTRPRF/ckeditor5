@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -7,6 +7,7 @@
  * @module core/editor/editorconfig
  */
 
+import type { ArrayOrItem, Translations } from '@ckeditor/ckeditor5-utils';
 import type Context from '../context.js';
 import type { PluginConstructor } from '../plugin.js';
 import type Editor from './editor.js';
@@ -533,6 +534,11 @@ export interface EditorConfig {
 	 * [order a trial](https://orders.ckeditor.com/trial/premium-features).
 	 */
 	licenseKey?: string;
+
+	/**
+	 * Translations to be used in the editor.
+	 */
+	translations?: ArrayOrItem<Translations>;
 }
 
 /**

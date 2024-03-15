@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -35,6 +35,41 @@ describe( 'Locale', () => {
 
 			expect( locale ).to.have.property( 'uiLanguage', 'pl' );
 			expect( locale ).to.have.property( 'contentLanguage', 'en' );
+		} );
+
+		it( 'sets the #translations', () => {
+			const translations = [ {
+				pl: {
+					dictionary: {
+						bold: 'Pogrubienie'
+					}
+				}
+			},
+			{
+				de: {
+					dictionary: {
+						bold: 'Fett'
+					}
+				}
+			}
+			];
+
+			const locale = new Locale( {
+				translations
+			} );
+
+			expect( locale ).to.have.deep.property( 'translations', {
+				pl: {
+					dictionary: {
+						bold: 'Pogrubienie'
+					}
+				},
+				de: {
+					dictionary: {
+						bold: 'Fett'
+					}
+				}
+			} );
 		} );
 
 		it( 'defaults #language to en', () => {
