@@ -18,7 +18,7 @@ export default class Image extends Plugin {
 				const button = new ButtonView();
 
 				button.set( {
-					label: 'Image',
+					label: 'OwnImage',
 					withText: false,
 					tooltip: true,
 					icon
