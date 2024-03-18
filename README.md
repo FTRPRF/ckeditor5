@@ -33,6 +33,8 @@ CKEditor5 is an ultra-modern JavaScript rich-text editor with MVC architecture, 
 		- [Development](#development)
 		- [Reporting issues and feature requests](#reporting-issues-and-feature-requests)
 	- [License](#license)
+    - [How to trigger a build](#how-to-trigger-a-build)
+    - [How to sync with the ckeditor main repo](#how-to-sync-with-the-ckeditor5-master-branch)
 
 ## Quick start
 
@@ -68,7 +70,7 @@ In your HTML page, add an element that CKEditor should replace:
 Load the classic editor build (you can choose between the [CDN](https://cdn.ckeditor.com/#ckeditor5), [npm](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#npm), and [zip downloads](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#zip-download)):
 
 ```html
-<script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
 ```
 
 Call the [`ClassicEditor.create()`](https://ckeditor.com/docs/ckeditor5/latest/api/module_editor-classic_classiceditor-ClassicEditor.html#static-function-create) method:
@@ -164,9 +166,10 @@ Licensed under the terms of [GNU General Public License Version 2 or later](http
 Just push something to development.
 
 ## How to sync with the ckeditor5 master branch:
+See also: https://levelup.gitconnected.com/how-to-update-fork-repo-from-original-repo-b853387dd471
 - create a sync branch based on the ckeditor5 master branch
 - merge our master branch into it
-- resolve merge conflicts
+- resolve merge conflicts, pay special attention to all files in ckeditor5-build-decoupled-document
 - confirm everything still works (manual testing I'm afraid)
 - do a little dance
 - get down tonight

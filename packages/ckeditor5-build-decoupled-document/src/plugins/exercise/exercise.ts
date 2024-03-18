@@ -1,5 +1,5 @@
-import { Plugin } from 'ckeditor5/src/core';
-import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
+import { Plugin } from 'ckeditor5/src/core.js';
+import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview.js';
 import icon from './icon.svg';
 
 export default class Exercise extends Plugin {

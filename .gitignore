@@ -29,8 +29,6 @@ mrgit.json
 /release/
 
 build
-# Prepared files to publish to npm.
-/release/
 
 # Ignore yalc
 .yalc
@@ -43,4 +41,3 @@ packages/*/src/**/*.js.map
 src/**/*.js
 src/**/*.js.map
 src/**/*.d.ts
-

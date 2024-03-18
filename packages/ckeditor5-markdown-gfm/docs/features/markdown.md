@@ -18,7 +18,7 @@ The editor below is configured to output GitHub Flavored Markdown. Edit the cont
 {@snippet features/markdown}
 
 <info-box info>
-	This demo only presents a limited set of features. Visit the {@link examples/builds/full-featured-editor feature-rich editor example} to see more in action.
+	This demo presents a limited set of features. Visit the {@link examples/builds/full-featured-editor feature-rich editor example} to see more in action.
 </info-box>
 
 ## Additional feature information
@@ -32,7 +32,7 @@ If you need more extensive Markdown support for formatting elements (for example
 
 ## The Markdown data processor
 
-The Markdown plugin uses a {@link module:engine/dataprocessor/dataprocessor~DataProcessor data processor} (implemented by the {@link module:markdown-gfm/gfmdataprocessor~GFMDataProcessor} class) which changes the default output from HTML to Markdown. This means that you can {@link module:core/editor/utils/dataapimixin~DataApi#setData set} or {@link module:core/editor/utils/dataapimixin~DataApi#getData get} data from the editor in the Markdown format:
+The Markdown plugin uses a {@link module:engine/dataprocessor/dataprocessor~DataProcessor data processor} (implemented by the {@link module:markdown-gfm/gfmdataprocessor~GFMDataProcessor} class) which changes the default output from HTML to Markdown. This means that you can {@link module:core/editor/editor~Editor#setData set} or {@link module:core/editor/editor~Editor#getData get} data from the editor in the Markdown format:
 
 ```js
 editor.getData(); // -> 'This is [CKEditor&nbsp;5](https://ckeditor.com).'
@@ -117,7 +117,7 @@ Some other ways to output the edited content include:
 * {@link features/export-word Export to Word} &ndash; Generate editable `.docx` files out of your editor-created content.
 * {@link features/export-pdf Export to PDF} &ndash; Generate portable PDF files out of your editor-created content.
 * {@link features/autoformat Autoformatting} &ndash; Use Markdown syntax shortcodes to automatically format your content as you type!
-* {@link features/paste-markdown Paste Markdown} &ndash; Paste Markdown formatted content straight into the editor.
+* {@link features/paste-markdown Paste Markdown} &ndash; Paste Markdown-formatted content straight into the editor.
 
 ## Contribute
 
