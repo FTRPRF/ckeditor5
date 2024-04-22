@@ -78,6 +78,7 @@ import { RemoveBlockStyle } from './plugins/removeBlockStyle/index.js';
 import { HtmlInsert } from './plugins/htmlInsert/index.js';
 // @ts-ignore
 import { ScratchBlocks } from '@ftrprf/ckeditor5-scratch-blocks/src/index.js';
+import {HtmlEmbed} from "@ckeditor/ckeditor5-html-embed";
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 	public static override builtinPlugins = [
@@ -109,6 +110,7 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 		FullScreen,
 		GeneralHtmlSupport,
 		Heading,
+		HtmlEmbed,
 		HtmlInsert,
 		Iframe,
 		Image,
@@ -196,7 +198,8 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 				'styledLink',
 				'fullScreen',
 				'source',
-				'htmlInsert'
+				'htmlInsert',
+				'htmlEmbed'
 			]
 		},
 		image: {
