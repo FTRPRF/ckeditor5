@@ -286,12 +286,18 @@ export default class DecoupledEditor extends DecoupledEditorBase {
 			languages: [
 				{ language: 'html', label: 'HTML' },
 				{ language: 'css', label: 'CSS' },
-				{ language: 'diff', label: 'Diff' },
 				{ language: 'javascript', label: 'JavaScript' },
 				{ language: 'python', label: 'Python' },
 				{ language: 'json', label: 'JSON' },
 				{ language: 'markdown', label: 'Markdown' },
-				{ language: 'blocks', label: 'Scratch' }
+				{ language: 'blocks', label: 'Scratch' },
+				{ language: 'diff', label: 'Diff' },
+				{ language: 'diff-html', label: 'Diff HTML' },
+				{ language: 'diff-css', label: 'Diff CSS' },
+				{ language: 'diff-javascript', label: 'Diff JavaScript' },
+				{ language: 'diff-python', label: 'Diff Python' },
+				{ language: 'diff-json', label: 'Diff JSON' },
+				{ language: 'diff-markdown', label: 'Diff Markdown' },
 			]
 		},
 
